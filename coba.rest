@@ -1,0 +1,45 @@
+//coba.rest
+GET http://103.151.155.59:4000/posts
+
+###
+POST http://103.151.155.59:4000/posts
+content-type: application/json
+
+{
+    "title" : "judul 1",
+    "body" : "ini bodi 1"
+}
+
+###
+GET http://103.151.155.59:4000/posts/6431348dcdf8f134405a1b83
+
+###
+PATCH  http://103.151.155.59:4000/posts/6431348dcdf8f134405a1b83
+content-type: application/json
+
+{
+    "title" : "judul 5 Rev",
+    "body" : "ini bodi 5 Rev"
+}
+
+###
+DELETE  http://103.151.155.59:4000/posts/6431348dcdf8f134405a1b83
+
+###
+POST http://103.151.155.59:4000/users/signup
+content-type: application/json
+
+{
+    "username" : "usersilmi",
+    "password" : "passwordsilmi"
+}
+
+###
+POST http://103.151.155.59:4000/users/login
+content-type: application/json
+
+{
+    "username" : "usersilmi",
+    "password" : "passwordsilmi"
+}
+

@@ -1,0 +1,19 @@
+#docker-compose.dev.yml
+version: '3'
+services:
+  node-app:
+    build:
+      context: .
+      args:
+        NODE_ENV: development
+    ports:
+      - "3000"
+    volumes:
+      - ./:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+      - MONGO_USER=root
+      - MONGO_PASSWORD=super-password1
+      - SESSION_SECRET=secret-key
+    command: npm run dev
